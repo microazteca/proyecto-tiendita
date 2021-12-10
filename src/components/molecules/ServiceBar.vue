@@ -9,13 +9,13 @@
     DownArrowServices.bar__arrow(@click.native="openService()" v-show="serviceClosed")
     UpArrowServices.bar__arrow.bar__arrow--up(@click.native="closeService()" v-show="serviceOpened")
   .bar__content(v-show="serviceOpened")
-    slot(name="img")
+    slot.bar__content-img(name="img")
 </template>
 
 <script>
 import DownArrowServices from "@/components/atoms/DownArrowServices.vue";
 import UpArrowServices from "@/components/atoms/UpArrowServices.vue";
-import recargas from "@/assets/data/services.js";
+
 export default {
   props: {
     src: { type: String },
@@ -26,7 +26,7 @@ export default {
     DownArrowServices,
   },
   data() {
-    return { serviceOpened: false, serviceClosed: true, recargas };
+    return { serviceOpened: false, serviceClosed: true };
   },
   methods: {
     openService() {
@@ -79,10 +79,12 @@ export default {
   }
 
   &__content {
-  }
-
-  &__content-svg {
-    width: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(auto, 50px);
+    grid-gap: 5px;
   }
 }
 </style>

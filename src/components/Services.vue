@@ -6,17 +6,33 @@
       IconCash
     slot(slot="servicio") Pagos
     slot(slot="img")
-      img(src="@/assets/img/telcel.png")
-      img(src="@/assets/img/telcel.png")
+      img(src="@/assets/img/recargas/telcel.png")
+      img(src="@/assets/img/recargas/movistar.png")
+      img(src="@/assets/img/recargas/att.png")
+      img(src="@/assets/img/recargas/unefon.png")
   ServiceBar
     slot(slot="src") 
         IconMobile
     slot(slot="servicio") Recargas
     slot(v-slot:default="props")
+    slot(slot="img")
+      img(src="@/assets/img/pagos/dish.png")
+      img(src="@/assets/img/pagos/sky.png")
+      img(src="@/assets/img/pagos/netflix.png")
+      img(src="@/assets/img/pagos/telmex.png")
+      img(src="@/assets/img/pagos/aguakan.png")
+      img(src="@/assets/img/pagos/cfe.png")
+      img(src="@/assets/img/pagos/spotify.png")
+      img(src="@/assets/img/pagos/izzi.png")
   ServiceBar
     slot(slot="src") 
         IconPrinter
     slot(slot="servicio") Copias e impresiones
+    slot(slot="img")
+      img(src="@/assets/img/recargas/telcel.png")
+      img(src="@/assets/img/recargas/movistar.png")
+      img(src="@/assets/img/recargas/att.png")
+      img(src="@/assets/img/recargas/unefon.png")
   ServiceBar
     slot(slot="src") 
         IconCard
