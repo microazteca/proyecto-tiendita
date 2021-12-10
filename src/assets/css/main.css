@@ -1,25 +1,33 @@
-*{
-	box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
 }
 
-html{
-	scroll-behavior: smooth;
+html {
+ scroll-behavior: smooth;
 }
 
-a{
-	text-decoration: none;
+a {
+ text-decoration: none;
 }
 
-:root{
-	--background-header-color: rgb(121, 194, 109);
-	--background-footer-primary-color: rgb(253, 124, 82);
-	--background-footer-secondary-color: rgb(121, 194, 109);
-	--background-search-bar-color: rgb(228, 243, 226);
-	--background-products-card-color: rgb(255, 229, 220);
-	--text-primary-color: rgb(0, 0, 0);
-	--text-secondary-color: rgb(93, 93, 93);
-	--text-tertiary-color: rgb(74, 74, 74);
-	--icon-services-color: rgb(253, 150, 117);
-	--boder-services-color: rgb(190, 190, 190);
-	--border-search-bar-color: rgb(73, 116, 65);
+:root {
+ --background-header-color: rgb(104, 104, 172);
+ --background-footer-primary-color: rgb(104, 104, 172);
+ --background-footer-secondary-color: rgb(118, 158, 81);
+ --background-search-bar-color: rgb(225, 225, 238);
+ --background-products-card-color: rgb(228, 236, 220);
+ --background-arrow-up-color: rgb(164, 164, 205, 0.7);
+ --boder-services-color: rgb(190, 190, 190);
+ --border-search-bar-color: rgb(62, 62, 103);
+ --icon-services-color: rgb(145, 177, 116);
+ --icon-services-desktop-color: rgb(94, 126, 65);
+ --icon-footer-color: rgb(255, 255, 255);
+ --icon-see-more-fill: rgb(104, 104, 172);
+ --text-primary-color: rgb(0, 0, 0);
+ --text-secondary-color: rgb(93, 93, 93);
+ --text-tertiary-color: rgb(74, 74, 74);
+ --text-header-color: rgb(255, 255, 255);
 }

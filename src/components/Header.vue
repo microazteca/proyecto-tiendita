@@ -4,7 +4,17 @@
 </template>
 
 <style lang="scss" scoped>
-.header{
-	background-color: #79C26D;
+.header {
+  height: 40px;
+  background-color: var(--background-header-color);
+		padding: 8px 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+  &__h1 {
+				font-size: 32px;
+				color: var(--text-header-color);
+  }
 }
 </style>
