@@ -14,6 +14,13 @@ a {
 }
 
 :root {
+  /* static */
+  --primary: #6868ac;
+  --accent: #769e51;
+  --white: #ffffff;
+  --black: #000000;
+  /* background */
+  /* text */
   --background-header-color: rgb(104, 104, 172);
   --background-footer-primary-color: rgb(104, 104, 172);
   --background-footer-secondary-color: rgb(118, 158, 81);
