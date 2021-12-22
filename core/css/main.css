@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(220, 220, 220);
+}
+::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  background-image: linear-gradient(to bottom, #b1b1b1 0%, #555555 100%);
+  background-clip: content-box;
+  border-radius: 20px;
+}
+:root {
+  /* static */
+  --static-principal: rgb(74, 77, 235);
+  --static-secondary: rgb(103, 58, 183);
+  --static-white: rgb(255, 255, 255);
+  --static-gray-100: rgb(245, 245, 245);
+  --static-gray-500: rgb(117, 117, 117);
+  --static-gray-700: rgb(97, 97, 97);
+  --static-gray-1000: rgb(66, 66, 66);
+  --static-black: rgb(0, 0, 0);
+  /* background */
+  --background-principal: rgb(74, 77, 235);
+  --background-bookmark: rgb(255, 82, 82);
+  --background-bookmark-hover: rgb(212, 66, 66);
+  --background-white: rgb(255, 255, 255);
+  --background-gray-100: rgb(245, 245, 245);
+  --background-gray-700: rgb(97, 97, 97);
+  /* text */
+  --text-principal: rgb(74, 77, 235);
+  --text-secondary: rgb(103, 58, 183);
+  --text-black: rgb(0, 0, 0);
+  --text-gray-1000: rgb(66, 66, 66);
+  --text-gray-700: rgb(97, 97, 97);
+  --text-gray-500: rgb(117, 117, 117);
+  --text-white: rgb(255, 255, 255);
+  /* hovers */
+  --hover-background-nav-button: rgba(103, 58, 183, 0.8);
+  --hover-background-transparent-button: rgba(103, 58, 183, 0.15);
+  --hover-color-button: rgb(255, 255, 255, 0.8);
+  /* borders */
+  --border-gray: rgb(226, 226, 226);
+  /* shadows */
+  --shadow-gray: rgb(128, 128, 128);
+  --shadow-speaker-card: 0 2px 1px -1px rgb(0 0 0 / 20%),
+    0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  /* transparencies */
+  --transparency-black: rgba(0, 0, 0, 0.5);
+  /* svgs */
+  --svg-principal: rgb(74, 77, 235);
+  --facebook: rgb(25, 118, 210);
+  --twitter: rgb(85, 172, 238);
+  --instagram: rgba(255, 28, 116, 1);
+  --youtube: rgb(246, 28, 13);
+  --meetup: rgb(235, 37, 64);
+  --github: rgb(0, 0, 0);
+  --linkedin: rgb(10, 102, 194);
+  --svg-link: rgb(66, 66, 66);
+}
+.app--dark {
+  /* background */
+  --background-gray-100: rgb(60, 60, 60);
+  --background-white: rgb(50, 50, 50);
+  /* text */
+  --text-white: rgb(0, 0, 0);
+  --text-gray-1000: rgb(200, 200, 200);
+  --text-gray-700: rgb(175, 175, 175);
+  --text-gray-500: rgb(150, 150, 150);
+  --text-black: rgb(220, 220, 220);
+  /* hovers */
+  --hover-background-transparent-button: rgba(255, 255, 255, 0.7);
+  /* shadows */
+  --shadow-speaker-card: 0 2px 1px -1px rgb(255 255 255 / 20%),
+    0 1px 1px 0 rgb(255 255 255 / 14%), 0 1px 3px 0 rgb(255 255 255 / 12%);
+  /* svgs */
+  --svg-link: rgb(200, 200, 200);
+}
