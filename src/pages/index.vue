@@ -1,7 +1,9 @@
 <template lang="pug">
 div
   h1 Home
-  Hero
-  HeroText
-  HeroTextHighlight
+  HomeHero
+  HomeHeroText
+  HomeHeroTextHighlight
+  Button
+  HomeHeroButton
 </template>

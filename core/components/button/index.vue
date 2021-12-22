@@ -1,5 +1,5 @@
 <template lang="pug">
-button: slot slot
+button: slot default
 </template>
 <style lang="scss" scoped>
 button {

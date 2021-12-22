@@ -21,16 +21,18 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '../core/css/normalize.css',
-    '../core/css/main.css',
-    '../core/css/variables',
+    '../core/assets/css/normalize.css',
+    '../core/assets/css/main.css',
+    '../core/assets/css/variables',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: { dirs: ['../core/components', '@/components'] },
+  components: {
+    dirs: ['../core/components', '@/components', '../core/assets/icons'],
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -49,7 +51,7 @@ export default {
   ],
   // global scss variables config
   styleResources: {
-    scss: ['../core/css/variables.scss'],
+    scss: ['../core/assets/css/variables.scss'],
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   // pwa: {
