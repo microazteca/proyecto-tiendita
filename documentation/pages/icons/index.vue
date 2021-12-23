@@ -7,7 +7,6 @@ main
 		li Width: 40px
 		li Height: 40px
 		li Fill-color: currentColor (this way we can assign a color through the css parent component)
-
 	article
 		h2 Icons collection
 		.content

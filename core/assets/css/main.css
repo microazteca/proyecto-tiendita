@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -12,8 +13,31 @@ a {
 
 :root {
   /* static */
-  
+  --static-primary: #6868ac;
+  --static-accent: #769e51;
+  --static-white: #ffffff;
+  --static-black: #000000;
+  --static-grey: #5d5d5d;
+  --static-primary-100: #e1e1ee;
+  --static-primary-300: #a4a4cd;
+  --static-primary-700: #3e3e67;
+  --static-accent-100: #e4ecdc;
+  --static-grey-200: #bebebe;
+  --static-grey-600: #4a4a4a;
+  /* background */
+  --background-primary-100: #e1e1ee;
+  /* fill */
+  --fill-accent-400: #91b174;
+  --fill-accent-600: #5e7e41;
+  /* text */
+  --text-black: #000000;
 }
 .app--dark {
-  
+  /* background */
+  --background-grey-600: #4a4a4a;
+  --background-primary-400: #8686bd;
+  /* fill */
+  --fill-white: #ffff;
+  /* text */
+  --text-white: #ffff;
 }
