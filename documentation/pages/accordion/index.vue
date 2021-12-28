@@ -2,24 +2,12 @@
 main
 	h1 Accordions
 	article
-		div.bar
-			div.header
-				IconCash.icon
-				p Pagos
-			IconArrowDown.icon
+		Accordion
+			slot(slot="icon")
+				IconCash
+			slot(slot="servicio") Pagos
+			slot(slot="img")
+				p This is the content you want to add to the accordion.
 </template>
 <style lang="scss" scoped>
-.bar{
-	display: flex;
-}
-
-.header{
-	display: flex;
-}
-
-.icon{
-	width: 25px;
-}
-
-
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-	header.header
+	header.header#top
 		a(:href="'/'" title="home")
 			h1.title Atzin.com
 </template>
