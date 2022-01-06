@@ -2,7 +2,7 @@
 main
 	h1 Accordions
 	article
-		Accordion
+		Accordion.accordion
 			slot(slot="icon")
 				IconCash
 			slot(slot="servicio") Pagos
@@ -10,4 +10,7 @@ main
 				p This is the content you want to add to the accordion.
 </template>
 <style lang="scss" scoped>
+.accordion{
+	width: 520px;
+}
 </style>

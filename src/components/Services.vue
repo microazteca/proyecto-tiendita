@@ -75,7 +75,7 @@ margin: 10px;
 
 .title{
 	color: var(--text-black);
-	font-size: 24px;
+	font-size: 26px;
 	margin-bottom: 5px;
 }
 

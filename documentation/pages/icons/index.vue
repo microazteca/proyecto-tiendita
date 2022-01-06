@@ -40,6 +40,9 @@ main
 			.icon-container
 				p IconWhatsapp
 				IconWhatsapp.icon
+			.icon-container
+				p IconSearch
+				IconSearch.icon
 </template>
 <style lang="scss" scoped>
 main{

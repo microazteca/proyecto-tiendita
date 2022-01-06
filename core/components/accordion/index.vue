@@ -56,19 +56,17 @@ export default {
 	gap: 5px;
 	align-items: center;
 	font-family: 'Manrope', sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .icon{
+	width: 30px;
+	display: flex;
+	align-self: center;
 	justify-self: flex-end;
 	color: var(--fill-accent-400);
 }
 
-.icon{
-	width: 25px;
-	display: flex;
-	align-self: center;
-}
 
 .content{
 	padding: 15px 10px;

@@ -1,9 +1,13 @@
 export default {
+  server:{
+    host: "192.168.1.133",
+    port: 8080,
+  },
+  
   srcDir: __dirname,
   buildDir: '.nuxt/src',
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 

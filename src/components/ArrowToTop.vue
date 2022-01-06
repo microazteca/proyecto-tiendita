@@ -7,7 +7,7 @@
 	position: fixed;
 	right: 2px;
 	bottom: 80px;
-	width: 25px;
+	width: 30px;
 	color: var(--static-primary-700);
 }
 </style>

@@ -11,7 +11,7 @@
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 35px;
+	height: 40px;
 }
 
 .content{
@@ -29,7 +29,7 @@
 }
 
 .icon{
-	width: 25px;
+	width: 30px;
 	color: var(--static-white);
 }
 </style>
