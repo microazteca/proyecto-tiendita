@@ -20,6 +20,7 @@
 	justify-content: space-around;
 	gap: 5px;
 	justify-self: center;
+	width: 100%;
 }
 
 .top{

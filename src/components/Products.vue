@@ -52,7 +52,7 @@
 	margin-top: 13px;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(2, auto);
+	grid-template-columns: repeat(2, 1fr);
 	gap: 18px;
 	padding: 0 10px;
 }
