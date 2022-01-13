@@ -1,15 +1,15 @@
 export default {
   server:{
-    host: "192.168.1.133",
+    host: "localhost",
     port: 8080,
   },
   
   srcDir: __dirname,
   buildDir: '.nuxt/src',
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -27,7 +27,7 @@ export default {
   css: [
     '../core/assets/css/normalize.css',
     '../core/assets/css/main.css',
-    '../core/assets/css/variables',
+    '../core/assets/css/variables.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,7 +35,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: ['../core/components', '@/components', '../core/assets/icons', '../core/assets/img'],
+    dirs: ['../core/components', '@/components', '../core/assets/icons'],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -52,6 +52,7 @@ export default {
     // '@nuxtjs/pwa',
     // global scss varaibles module https://medium.com/dont-leave-me-out-in-the-code/global-scss-variables-in-nuxt-5fe864873cb5
     '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt',
   ],
   // global scss variables config
   styleResources: {
