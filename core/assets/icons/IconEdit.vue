@@ -1,0 +1,5 @@
+<template lang="pug">
+<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.706 3.18894L13.4096 5.89259M11.853 2.04188C12.5996 1.29529 13.8101 1.29529 14.5567 2.04188C15.3033 2.78847 15.3033 3.99893 14.5567 4.74553L4.0284 15.2738H1.35193V12.543L11.853 2.04188Z" stroke="currentColor" stroke-width="1.53" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</template>
