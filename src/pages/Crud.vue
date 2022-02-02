@@ -2,9 +2,9 @@
 	.crud
 		h1.m-3 Base de datos | Tiendita
 		b-container
-			b-button(pill variant="primary" @click="$bvModal.show('new-product')") +
-		ModalNewProduct
-		ProductsList
+			b-button(pill variant="primary" @click="$bvModal.show('modalNewProduct')") +
+		CrudModalNewProduct
+		CrudProductsList
 </template>
 <script>
 export default {

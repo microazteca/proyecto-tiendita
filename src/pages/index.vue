@@ -1,8 +1,8 @@
 <template lang="pug">
 div
-	Header
-	ArrowToTop
-	Services
-	Products
-	Footer
+	HomeHeader
+	HomeArrowToTop
+	HomeServices
+	HomeProducts
+	HomeFooter
 </template>
