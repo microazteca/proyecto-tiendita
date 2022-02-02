@@ -1,4 +1,5 @@
 <template lang="pug">
+div
 	b-container.bv-example-row.mt-3.d-flex.gap-3
 		b-card(v-for="producto in productos" :key="producto.id").w-50
 			b-card-img(:src="producto.img")
@@ -9,6 +10,7 @@
 					IconEdit.icon
 				b-button.py-1.px-2(variant="danger" @click="deleteProduct(producto.id)")
 					IconDelete.icon
+	ModalEditProduct(:product="productEdited" @editProduct="editProduct")
 </template>
 <script>
 import axios from 'axios'
@@ -29,6 +31,18 @@ export default {
 			const products = await fetch('http://localhost:5000/api', {method: 'GET'})
 			const productsJson = await products.json()
 			this.productos = productsJson
+		},
+		editProduct( product ){
+			const {nombre, imagen, precio, id} = product	
+			const url = 'http://localhost:5000/api/'
+			axios.put(url + id, {
+				nombre, precio, imagen, id
+			}).then(res => {
+				Swal.fire('Producto modificado con éxito', '', 'success')
+				.then(res => { window.location.reload() }) 
+			}).catch(err => {
+				console.log(err);
+			})
 		},
 		openEditModal(id){
 			const [newProduct] = this.productos.filter(producto => producto.id === id)

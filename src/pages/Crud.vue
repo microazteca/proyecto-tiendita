@@ -5,7 +5,6 @@
 			b-button(pill variant="primary" @click="$bvModal.show('new-product')") +
 		ModalNewProduct
 		ProductsList
-		ModalEditProduct
 </template>
 <script>
 export default {
