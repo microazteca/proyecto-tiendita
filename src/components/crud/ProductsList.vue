@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-	b-container.bv-example-row.mt-3.d-flex.gap-3
-		b-card(v-for="product in products" :key="product.id").w-50
+	b-container.bv-example-row.mt-3.d-flex.gap-3.row
+		b-card(v-for="product in products" :key="product.id").col-6.col-sm-3.col-md-3
 			b-card-img(:src="product.image")
 			b-card-text {{ product.name }}
 			b-card-text {{ product.price }}

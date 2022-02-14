@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt --config-file src/nuxt.config.js -p=3000",
+    "dev": "nuxt --config-file src/nuxt.config.js",
     "doc": "nuxt --config-file documentation/nuxt.config.js -p=4000",
     "build": "nuxt build --config-file src/nuxt.config.js",
     "start": "nuxt start --config-file src/nuxt.config.js",

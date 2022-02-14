@@ -1,14 +1,14 @@
 <template lang="pug">
 	b-modal(id="modalNewProduct" hide-footer hide-header-close hide-header)
 		b-container.bv-example-row.mt-3 Ingresar nuevo artículo
-			b-form-row
+			b-form(enctype="multipart/form-data" id="formulario")
 				b-form-input.mt-3(placeholder="Nombre del producto" name="name" required v-model="name")
 				b-input-group.mt-3(prepend="$")
 					b-form-input(type="number" placeholder="Precio" name="price" required v-model="price")
-				b-file.mb-2.mt-3(placeholder="Seleccionar archivo" name="img" plain required v-model="img")
+				b-form-file.mb-2.mt-3(accept="image/*" placeholder="Seleccionar archivo" name="image" plain required v-model="image")
 				p.mt-3 Vista previa del producto:
 				b-card.w-50
-					b-card-text {{ img ? img.name : '' }}
+					b-card-text {{ image ? image.name : '' }}
 					b-card-text {{ name }}
 					b-card-text ${{ price }}
 				b-col.d-flex.flex-row-reverse.my-2.gap-3
@@ -24,19 +24,15 @@ export default {
     return {
       name: '',
       price: '',
-      img: '',
+      image: null,
     }
   },
   methods: {
     addProduct() {
-      const name = this.name
-      const price = this.price
-      const image = this.img
+      const form = new FormData(document.querySelector('#formulario'))
       axios
-        .post('http://localhost:5000/api', {
-          name,
-          price,
-          image,
+        .post('http://localhost:5000/api', form, {
+          headers: { 'Content-Type': 'multipart/form-data' },
         })
         .then((res) => {
           Swal.fire('Producto añadido con éxito', '', 'success').then((res) => {
