@@ -1,11 +1,11 @@
 <template lang="pug">
 	b-modal(id="modalEditProduct" hide-footer hide-header-close hide-header)
 		b-container.bv-example-row.mt-3 Editar artículo
-		b-form-row
+		b-form(enctype="multipart/form-data")
 			b-form-input.mt-3(:placeholder="product.name" required v-model="product.name")
 			b-input-group.mt-3(prepend="$")
 				b-form-input(type="number" :placeholder="product.price" required v-model="product.price")
-			b-file.mb-2.mt-3(plain required)
+			b-file.mb-2.mt-3(accept="image/*" placeholder="Seleccionar archivo" name="image" plain required)
 			p.mt-3 Vista previa del producto:
 			b-card.w-50
 				b-card-text {{ product.image }}
