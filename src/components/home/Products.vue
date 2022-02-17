@@ -3,37 +3,36 @@
 		h2.title Productos
 		SearchBar.search-bar
 		.grid
-			Card
+			Card(v-for="product in products" :key="product.id")
 				slot(slot="img")
 					.img-container
-						img(src="@/assets/img/productos/takis.png")
-				slot(slot="producto") Takis Fuego
-				slot(slot="precio") $15.00
-			Card
-				slot(slot="img")
-					.img-container
-						img(src="@/assets/img/productos/runners.png")
-				slot(slot="producto") Runners Fuego
-				slot(slot="precio") $10.00
-			Card
-				slot(slot="img")
-					.img-container
-						img(src="@/assets/img/productos/sabritas-habanero.jpeg")
-				slot(slot="producto") Sabritas Habanero
-				slot(slot="precio") $15.00
-			Card
-				slot(slot="img")
-					.img-container
-						img(src="@/assets/img/productos/takis.png")
-				slot(slot="producto") Takis Fuego
-				slot(slot="precio") $15.00
-			Card
-				slot(slot="img")
-					.img-container
-						img(src="@/assets/img/productos/takis.png")
-				slot(slot="producto") Takis Fuego
-				slot(slot="precio") $15.00
+						img(:src="`http://localhost:5000${product.image}`")
+				slot(slot="producto") {{ product.name }}
+				slot(slot="precio") ${{ product.price }}
 </template>
+<script>
+
+export default {
+	data() {
+		return {
+			products: []
+		}
+	},
+	mounted(){
+		this.getProducts()
+	},
+	methods: {
+		async getProducts() {
+      const products = await fetch('http://localhost:5000/api', {
+        method: 'GET',
+      })
+      const productsJson = await products.json()
+      this.products = productsJson
+    }
+	}
+}
+</script>
+
 <style lang="scss" scoped>
 .products{
 	display: flex;
