@@ -1,7 +1,7 @@
 <template lang="pug">
 	b-modal(id="modalNewProduct" hide-footer hide-header-close hide-header)
 		b-container.bv-example-row.mt-3 Ingresar nuevo artículo
-			b-form(enctype="multipart/form-data" id="formulario")
+			b-form(enctype="multipart/form-data" ref="formulario")
 				b-form-input.mt-3(placeholder="Nombre del producto" name="name" required v-model="name")
 				b-input-group.mt-3(prepend="$")
 					b-form-input(type="number" placeholder="Precio" name="price" required v-model="price")
@@ -27,11 +27,13 @@ export default {
       image: null,
     }
   },
+  mounted(){
+    },
   methods: {
     addProduct() {
-      const form = new FormData(document.querySelector('#formulario'))
+      const formData = new FormData(this.$refs.formulario)
       axios
-        .post('http://localhost:5000/api', form, {
+        .post('http://localhost:5000/api', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         })
         .then((res) => {

@@ -34,15 +34,13 @@ export default {
       const productsJson = await products.json()
       this.products = productsJson
     },
-    editProduct(product) {
-      const { name, image, price, id } = product
+    editProduct({product, formulario}) {
+      const { id } = product
       const url = 'http://localhost:5000/api/'
+      const formData = new FormData(formulario)
       axios
-        .put(url + id, {
-          name,
-          price,
-          image,
-          id,
+        .put(url + id, formData, {
+          headers: { 'Content-Type': 'multipart/form-data' },
         })
         .then((res) => {
           Swal.fire('Producto modificado con éxito', '', 'success').then(
