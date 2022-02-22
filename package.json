@@ -7,7 +7,7 @@
     "doc": "nuxt --config-file documentation/nuxt.config.js -p=4000",
     "build": "nuxt build --config-file src/nuxt.config.js",
     "start": "nuxt start --config-file src/nuxt.config.js",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run build --config-file src/nuxt.config.js",
     "generate": "nuxt generate --config-file src/nuxt.config.js",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
