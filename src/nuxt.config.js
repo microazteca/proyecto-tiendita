@@ -5,7 +5,7 @@ export default {
   },
   
   srcDir: __dirname,
-  buildDir: '.nuxt/src',
+  buildDir: '.nuxt',
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
   // Target: https://go.nuxtjs.dev/config-target
