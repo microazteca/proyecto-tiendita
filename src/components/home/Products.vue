@@ -23,7 +23,7 @@ export default {
 	},
 	methods: {
 		async getProducts() {
-      const products = await fetch('http://localhost:5000/api', {
+      const products = await fetch(process.env.ENDPOINT, {
         method: 'GET',
       })
       const productsJson = await products.json()

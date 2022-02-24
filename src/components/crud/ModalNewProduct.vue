@@ -33,7 +33,7 @@ export default {
     addProduct() {
       const formData = new FormData(this.$refs.formulario)
       axios
-        .post('http://localhost:5000/api', formData, {
+        .post(process.env.ENDPOINT, formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         })
         .then((res) => {

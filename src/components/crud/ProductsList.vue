@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async getProducts() {
-      const products = await fetch('http://localhost:5000/api', {
+      const products = await fetch(process.env.ENDPOINT, {
         method: 'GET',
       })
       const productsJson = await products.json()
@@ -36,7 +36,7 @@ export default {
     },
     editProduct({product, formulario}) {
       const { id } = product
-      const url = 'http://localhost:5000/api/'
+      const url = process.env.ENDPOINT
       const formData = new FormData(formulario)
       axios
         .put(url + id, formData, {
@@ -58,7 +58,7 @@ export default {
       this.productEdited = JSON.parse(JSON.stringify(newProduct))
     },
     deleteProduct(id) {
-      const url = 'http://localhost:5000/api/'
+      const url = process.env.ENDPOINT
       Swal.fire({
         title: '¿Confirma la eliminación del producto?',
         confirmButtonText: 'Confirmar',
