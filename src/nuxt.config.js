@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 export default {
   server:{
     host: "localhost",
@@ -55,7 +53,6 @@ export default {
     // global scss varaibles module https://medium.com/dont-leave-me-out-in-the-code/global-scss-variables-in-nuxt-5fe864873cb5
     '@nuxtjs/style-resources',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/dotenv',
   ],
   // global scss variables config
   styleResources: {
@@ -70,4 +67,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Environment variables
+  env: {
+    ENDPOINT: process.env.ENDPOINT
+  }
 }

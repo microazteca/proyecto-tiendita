@@ -15,7 +15,6 @@
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix && yarn lint:style --fix"
   },
   "dependencies": {
-    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "axios": "^0.25.0",
     "bootstrap": "^5.1.3",
