@@ -33,6 +33,7 @@ export default {
       })
       const productsJson = await products.json()
       this.products = productsJson
+      console.log(this.products)
     },
     editProduct({ product, formulario }) {
       const { id } = product
