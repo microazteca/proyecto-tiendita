@@ -6,7 +6,7 @@
 			Card(v-for="product in products" :key="product.id")
 				slot(slot="img")
 					.img-container
-						img(:src="`http://localhost:5000${product.image}`")
+						img(:src="product.image")
 				slot(slot="producto") {{ product.name }}
 				slot(slot="precio") ${{ product.price }}
 </template>
