@@ -1,7 +1,7 @@
 <template lang="pug">
 	.products
 		h2.title Productos
-		SearchBar.search-bar
+		//- SearchBar.search-bar
 		.grid
 			Card(v-for="product in products" :key="product.id")
 				slot(slot="img")
@@ -21,8 +21,8 @@ export default {
     this.getProducts()
   },
   methods: {
-    async getProducts() {
-      console.log(process.env.ENDPOINT)
+    async getProducts(res) {
+      res.send(process.env.ENDPOINT)
       const products = await fetch(process.env.ENDPOINT, {
         method: 'GET',
       })
