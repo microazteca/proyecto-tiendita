@@ -21,8 +21,7 @@ export default {
     this.getProducts()
   },
   methods: {
-    async getProducts(res) {
-      res.send(process.env.ENDPOINT)
+    async getProducts() {
       const products = await fetch(process.env.ENDPOINT, {
         method: 'GET',
       })
