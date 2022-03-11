@@ -14,91 +14,93 @@
 				slot(name="impresiones")
 </template>
 <script>
-
 export default {
-	data() {
-		return {
-			serviceOpened: false, 
-			serviceClosed: true
-		}
-	},
-	methods: {
-		openService(){
-			this.serviceOpened = !this.serviceOpened;
-			this.serviceClosed = !this.serviceClosed
-		},
-		closeService(){
-			this.serviceClosed = !this.serviceClosed;
-			this.serviceOpened = !this.serviceOpened
-		},
-	}
+  data() {
+    return {
+      serviceOpened: false,
+      serviceClosed: true,
+    }
+  },
+  methods: {
+    openService() {
+      this.serviceOpened = !this.serviceOpened
+      this.serviceClosed = !this.serviceClosed
+    },
+    closeService() {
+      this.serviceClosed = !this.serviceClosed
+      this.serviceOpened = !this.serviceOpened
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 
-.accordion{
-	display: flex;
-	flex-direction: column;
-	padding: 0 8px;
+.accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
 }
 
-.header{
-	display: flex;
-	justify-content: space-between;
-	border-bottom: .5px solid var(--static-grey-200);
-	padding: 2.5px 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--static-grey-200);
+  padding: 2.5px 0;
 }
 
-.title{
-	display: flex;
-	gap: 5px;
-	align-items: center;
-	font-family: 'Manrope', sans-serif;
-	font-size: 22px;
+.title {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
 }
 
-.icon{
-	width: 30px;
-	display: flex;
-	align-self: center;
-	justify-self: flex-end;
-	color: var(--fill-accent-400);
+.icon {
+  width: 30px;
+  display: flex;
+  align-self: center;
+  justify-self: flex-end;
+  color: var(--fill-accent-400);
 }
 
-
-.content{
-	padding: 15px 10px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: 35px;
-	gap: 10px 5px;
+.content {
+  // margin: 15px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 35px;
+  gap: 10px 5px;
+  overflow: hidden;
 }
 
 .fade-down {
-	&-enter{
-	opacity: 0;
+  &-enter {
+    opacity: 0;
+    max-height: 0;
 
-		&-active{
-			transition: all 0.8s ease, opacity 0.2s;
-		}
+    &-active {
+      transition: max-height 2s;
+    }
 
-		&-to{
-			opacity: 1;
-		}
-	}
+    &-to {
+      opacity: 1;
+      max-height: 1000px;
+    }
+  }
 
-	&-leave{
-		opacity: 1;
+  &-leave {
+    opacity: 1;
+    max-height: 1000px;
 
-		&-active{
-			transition: all 0.1s ease, opacity 0.2s;
-		}
+    &-active {
+      transition: max-height .5s;
+    }
 
-		&-to{
-			opacity: 0;
-		}
-	}
+    &-to {
+      max-height: 0;
+    }
+  }
 }
 </style>
