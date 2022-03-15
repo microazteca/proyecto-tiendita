@@ -70,7 +70,7 @@ export default {
   // margin: 15px 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 35px;
+  grid-auto-rows: 50px;
   gap: 10px 5px;
   overflow: hidden;
 }
