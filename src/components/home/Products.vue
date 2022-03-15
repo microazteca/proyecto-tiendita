@@ -1,9 +1,11 @@
 <template lang="pug">
 	.products
 		h2.title Productos
-		//- SearchBar.search-bar
+		.searchBar
+			input.searchBar__input(type="text" v-model="searchBar" placeholder="¿Qué estás buscando?")
+			IconSearch.searchBar__icon
 		.grid
-			Card(v-for="product in products" :key="product.id")
+			Card(v-for="product in filteredProducts" :key="product.id")
 				slot(slot="img")
 					.img-container
 						img(:src="product.image")
@@ -14,8 +16,16 @@
 export default {
   data() {
     return {
+      searchBar: '',
       products: [],
     }
+  },
+  computed: {
+    filteredProducts() {
+      return this.products.filter((product) =>
+        product.name.toLowerCase().includes(this.searchBar.toLowerCase())
+      )
+    },
   },
   mounted() {
     this.getProducts()
@@ -43,6 +53,26 @@ export default {
   color: var(--text-black);
   font-size: 26px;
   margin-bottom: 5px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+
+  &__input {
+    background-color: var(--static-primary-100);
+    border-radius: 19px;
+    border: solid 1px var(--static-grey-600);
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  &__icon {
+    width: 18px;
+    color: var(--static-grey-600);
+    margin: 0 5px;
+  }
 }
 
 .grid {
