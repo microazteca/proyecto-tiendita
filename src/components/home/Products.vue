@@ -2,7 +2,7 @@
 	.products
 		h2.title Productos
 		.searchBar
-			input.searchBar__input(type="text" v-model="searchBar" placeholder="¿Qué estás buscando?")
+			input.searchBar__input(type="text" id="searchBar" v-model="searchBar" placeholder="¿Qué estás buscando?" @change="filteredProducts()")
 			IconSearch.searchBar__icon
 		.grid
 			Card(v-for="product in filteredProducts" :key="product.id")
@@ -37,7 +37,7 @@ export default {
       })
       const productsJson = await products.json()
       this.products = productsJson
-    },
+    }
   },
 }
 </script>
