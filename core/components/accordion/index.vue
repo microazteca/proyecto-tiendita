@@ -1,16 +1,18 @@
 <template lang="pug">
 	.accordion
-		.header
+		.header(@click="openService")
 			.title
 				.icon
 					slot(name="icon")
 				slot(name="servicio")
 			.arrow
-				IconArrowDown.icon(@click.native="openService" v-show="serviceClosed")
-				IconArrowUp.icon(@click.native="closeService" v-show="serviceOpened")
+				IconArrowDown.icon(v-show="serviceClosed")
+				IconArrowUp.icon(v-show="serviceOpened")
 		transition(name='fade-down')
 			.content(v-show="serviceOpened")
 				slot(name="img")
+		transition(name='fade-down')
+			.content-text(v-show="serviceOpened")
 				slot(name="impresiones")
 </template>
 <script>
@@ -25,10 +27,6 @@ export default {
     openService() {
       this.serviceOpened = !this.serviceOpened
       this.serviceClosed = !this.serviceClosed
-    },
-    closeService() {
-      this.serviceClosed = !this.serviceClosed
-      this.serviceOpened = !this.serviceOpened
     },
   },
 }
@@ -67,10 +65,15 @@ export default {
 }
 
 .content {
-  // margin: 15px 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 50px;
+  gap: 10px 5px;
+  overflow: hidden;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
   gap: 10px 5px;
   overflow: hidden;
 }
