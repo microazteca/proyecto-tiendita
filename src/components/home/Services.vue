@@ -47,13 +47,14 @@
 				IconPrinter
 			slot(slot="servicio") Copias e impresiones
 			slot(slot="impresiones")
-				li Acta de nacimiento
-				li CURP
-				li RFC
-				li Citas INE
-				li Citas IMSS
-				li Citas pasaporte
-				li Boletas de calificaciones
+				.container
+					li Acta de nacimiento
+					li CURP
+					li RFC
+					li Citas INE
+					li Citas IMSS
+					li Citas pasaporte
+					li Boletas de calificaciones
 		Accordion
 			slot(slot="icon")
 				IconCard
@@ -83,6 +84,7 @@ img{
 	width: 100%;
 	height: 100%;
 	object-fit: contain ;
+  margin: 5px 0;
 }
 
 ul{
