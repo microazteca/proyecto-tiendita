@@ -57,8 +57,8 @@ export default {
 
 .searchBar {
   display: flex;
-  justify-content: space-between;
   margin: 0 10px;
+  position: relative;
 
   &__input {
     background-color: var(--static-primary-100);
@@ -72,6 +72,9 @@ export default {
     width: 18px;
     color: var(--static-grey-600);
     margin: 0 5px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
   }
 }
 
