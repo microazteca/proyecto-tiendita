@@ -2,8 +2,9 @@
 	.products
 		h2.title Productos
 		.searchBar
+			i.searchBar__i
+				IconSearch.searchBar__icon
 			input.searchBar__input(type="text" v-model="searchBar" placeholder="¿Qué estás buscando?")
-			IconSearch.searchBar__icon
 		.grid
 			Card(v-for="product in filteredProducts" :key="product.id")
 				slot(slot="img")
@@ -47,18 +48,33 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 10px 10px 50px;
+
+  @media (min-width: 1024px){
+    margin: 10px 50px 50px;
+  }
 }
 
 .title {
   color: var(--text-black);
   font-size: 26px;
   margin-bottom: 5px;
+
+  @media (min-width: 1024px) {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .searchBar {
   display: flex;
   margin: 0 10px;
   position: relative;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    margin: 0 auto 10px;
+  }
 
   &__input {
     background-color: var(--static-primary-100);
@@ -66,15 +82,20 @@ export default {
     border: solid 1px var(--static-grey-600);
     padding: 5px 10px;
     width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 680px;
+    }
+  }
+
+  &__i{
+    position: absolute;
+    margin: 0 12px;
   }
 
   &__icon {
     width: 18px;
     color: var(--static-grey-600);
-    margin: 0 5px;
-    position: absolute;
-    top: 6px;
-    right: 8px;
   }
 }
 
@@ -85,6 +106,14 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   padding: 0 10px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .img-container {
