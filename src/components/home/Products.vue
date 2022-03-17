@@ -38,7 +38,7 @@ export default {
       })
       const productsJson = await products.json()
       this.products = productsJson
-    },
+    }
   },
 }
 </script>
