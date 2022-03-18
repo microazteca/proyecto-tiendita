@@ -77,11 +77,16 @@ export default {
   }
 
   &__input {
-    background-color: var(--static-primary-100);
+    background-color: var(--static-primary-300);
     border-radius: 19px;
     border: solid 1px var(--static-grey-600);
     padding: 5px 10px;
     width: 100%;
+    color: var(--static-white);
+
+    &::placeholder{
+      color: var(--static-white);
+    }
 
     @media (min-width: 1024px) {
       width: 680px;
@@ -95,7 +100,7 @@ export default {
 
   &__icon {
     width: 18px;
-    color: var(--static-grey-600);
+    color: var(--static-white);
   }
 }
 
