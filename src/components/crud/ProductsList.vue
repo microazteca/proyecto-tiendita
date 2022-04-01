@@ -1,16 +1,18 @@
 <template lang="pug">
-div
-	b-container.bv-example-row.mt-3.d-flex.gap-3.row
-		b-card(v-for="product in products" :key="product.id").col-6.col-sm-3.col-md-3
-			b-card-img(:src='product.image')
-			b-card-text {{ product.name }}
-			b-card-text ${{ product.price }}
-			b-col.d-flex.my-2.gap-2
-				b-button.py-1.px-2(variant="dark" @click="$bvModal.show('modalEditProduct'), openEditModal(product.id)")
-					IconEdit.icon
-				b-button.py-1.px-2(variant="danger" @click="deleteProduct(product.id)")
-					IconDelete.icon
-	CrudModalEditProduct(:product="productEdited" @editProduct="editProduct")
+b-container.mt-3
+  b-row
+    b-col.mb-3(cols="6" sm="4" md="3" v-for="product in products" :key="product.id")
+      b-card.h-100
+        b-card-img(:src='product.image').image.mb-2
+        b-card-text {{ product.name }}
+        b-card-text ${{ product.price }}
+        template(#footer)
+          b-col.d-flex.my-2.justify-content-around
+            b-button.py-1.px-2(variant="dark" @click="$bvModal.show('modalEditProduct'), openEditModal(product.id)")
+              IconEdit.icon
+            b-button.py-1.px-2(variant="danger" @click="deleteProduct(product.id)")
+              IconDelete.icon
+      CrudModalEditProduct(:product="productEdited" @editProduct="editProduct")
 </template>
 <script>
 import axios from 'axios'
@@ -80,6 +82,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.image {
+  height: 150px;
+  object-fit: contain;
+}
+
 .icon {
   color: var(--static-white);
   width: 20px;

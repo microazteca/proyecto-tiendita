@@ -48,7 +48,7 @@
           IconPrinter
         slot(slot="servicio") Copias e impresiones
         slot(slot="impresiones")
-          .container
+          .container-text
             li Acta de nacimiento
             li CURP
             li RFC
@@ -94,15 +94,36 @@
   }
 }
 
-.accordion{
-  @media (min-width: 1024px){
+.accordion {
+  @media (min-width: 1024px) {
     width: 80%;
   }
 }
 
 .container {
+  width: 65px;
+  height: 57px;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    width: 70px;
+    height: 62px;
+  }
+
   @media (min-width: 1024px) {
+    width: 90px;
+    height: 82px;
     padding: 5px;
+  }
+}
+
+.container-text{
+  padding: 0 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding: 0 25px;
+    margin-bottom: 10px;
   }
 }
 

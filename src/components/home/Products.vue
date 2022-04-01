@@ -38,7 +38,7 @@ export default {
       })
       const productsJson = await products.json()
       this.products = productsJson
-    }
+    },
   },
 }
 </script>
@@ -49,7 +49,7 @@ export default {
   flex-direction: column;
   margin: 10px 10px 50px;
 
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     margin: 10px 50px 50px;
   }
 }
@@ -84,7 +84,7 @@ export default {
     width: 100%;
     color: var(--static-white);
 
-    &::placeholder{
+    &::placeholder {
       color: var(--static-white);
     }
 
@@ -93,7 +93,7 @@ export default {
     }
   }
 
-  &__i{
+  &__i {
     position: absolute;
     margin: 0 12px;
   }
@@ -117,18 +117,24 @@ export default {
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 .img-container {
-  width: 100%;
+  width: 100px;
+  height: 140px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    width: 120px;
+    height: 160px;
+  }
 }
 
 img {
-  width: 100px;
+  width: 100%;
   object-fit: cover;
 }
 </style>
