@@ -4,8 +4,6 @@
 		IconSearch.icon
 </template>
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
-
 .searchBar{
 	display: flex;
 	background-color: var(--static-primary-100);

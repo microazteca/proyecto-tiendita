@@ -33,8 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
-
 .accordion {
   display: flex;
   flex-direction: column;

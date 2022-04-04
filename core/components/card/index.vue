@@ -9,8 +9,6 @@
 				slot(name="precio")
 </template>
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
-
 .card{
 	background-color: var(--static-accent-100);
 	display: flex;

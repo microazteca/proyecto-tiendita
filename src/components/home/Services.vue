@@ -67,7 +67,6 @@
             img(src="@/assets/img/retiros/visa.png")
 </template>
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
 .services {
   display: flex;
   flex-direction: column;

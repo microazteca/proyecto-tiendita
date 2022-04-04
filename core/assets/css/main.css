@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -33,13 +30,4 @@ a {
   --fill-accent-600: #5e7e41;
   /* text */
   --text-black: #000000;
-}
-.app--dark {
-  /* background */
-  --background-grey-600: #4a4a4a;
-  --background-primary-400: #8686bd;
-  /* fill */
-  --fill-white: #ffff;
-  /* text */
-  --text-white: #ffff;
 }
