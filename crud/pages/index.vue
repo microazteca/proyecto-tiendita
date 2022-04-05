@@ -7,13 +7,12 @@
 		CrudProductsList
 </template>
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
-	.icon{
-		color: var(--static-white);
-		width: 20px;
-	}
+.icon {
+  color: var(--static-white);
+  width: 20px;
+}
 </style>

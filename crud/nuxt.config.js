@@ -1,11 +1,11 @@
 export default {
   server:{
     host: "localhost",
-    port: 3000,
+    port: 8080,
   },
 
   srcDir: __dirname,
-  buildDir: '.nuxt',
+  buildDir: '.nuxt/crud',
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
   // Target: https://go.nuxtjs.dev/config-target
@@ -13,7 +13,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Atzin.com',
+    title: 'Atzin.com | CRUD',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

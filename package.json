@@ -1,10 +1,11 @@
 {
-  "name": "api-tiendita",
+  "name": "tiendita-atzin",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt --config-file src/nuxt.config.js",
     "doc": "nuxt --config-file documentation/nuxt.config.js -p=4000",
+    "crud": "nuxt --config-file crud/nuxt.config.js -p=8080",
     "build": "nuxt build --config-file src/nuxt.config.js",
     "start": "nuxt start --config-file src/nuxt.config.js",
     "generate": "nuxt generate --config-file src/nuxt.config.js",
