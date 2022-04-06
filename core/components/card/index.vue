@@ -39,6 +39,7 @@
 }
 
 .price{
+  font-weight: 600;
 	font-size: 20px;
 	color: var(--static-black);
 }

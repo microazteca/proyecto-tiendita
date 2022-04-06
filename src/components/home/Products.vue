@@ -55,6 +55,7 @@ export default {
 }
 
 .title {
+  font-family: 'Poppins', sans-serif;
   color: var(--text-black);
   font-size: 26px;
   margin-bottom: 5px;
@@ -83,6 +84,7 @@ export default {
     padding: 5px 10px;
     width: 100%;
     color: var(--static-white);
+    font-family: 'Manrope', sans-serif;
 
     &::placeholder {
       color: var(--static-white);
@@ -94,6 +96,8 @@ export default {
   }
 
   &__i {
+    display: flex;
+    align-items: center;
     position: absolute;
     margin: 0 12px;
   }

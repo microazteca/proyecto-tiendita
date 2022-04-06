@@ -15,9 +15,8 @@
 }
 
 p{
+  font-family: 'Manrope', sans-serif;
 	font-size: 18px;
-	font-weight: 400;
-	font-family: 'Manrope', sans-serif;
 	color: var(--static-grey-600);
 }
 

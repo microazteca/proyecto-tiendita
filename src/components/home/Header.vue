@@ -11,6 +11,7 @@
 }
 
 .title{
+  font-family: 'Poppins', sans-serif;
 	color: var(--static-white);
 }
 </style>

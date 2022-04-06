@@ -61,10 +61,11 @@ export default {
   gap: 5px;
   align-items: center;
   font-family: 'Manrope', sans-serif;
+  font-weight: 600;
   font-size: 22px;
 }
 
-.arrow{
+.arrow {
   display: flex;
 }
 
@@ -86,12 +87,15 @@ export default {
   gap: 10px 5px;
   overflow: hidden;
   margin: 0 0 10px;
+  padding: 0 10px;
+  justify-items: center;
+
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  @media (min-width: 1024px){
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px 0;
   }
@@ -102,6 +106,7 @@ export default {
   flex-direction: column;
   gap: 10px 5px;
   overflow: hidden;
+  font-family: 'Manrope', sans-serif;
 }
 
 .fade-down {
@@ -124,7 +129,7 @@ export default {
     max-height: 1000px;
 
     &-active {
-      transition: max-height .5s;
+      transition: max-height 0.5s;
     }
 
     &-to {

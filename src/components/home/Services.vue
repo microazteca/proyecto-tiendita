@@ -68,6 +68,7 @@
 </template>
 <style lang="scss" scoped>
 .services {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   margin: 10px;
