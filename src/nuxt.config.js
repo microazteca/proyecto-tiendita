@@ -51,8 +51,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
     // global scss varaibles module https://medium.com/dont-leave-me-out-in-the-code/global-scss-variables-in-nuxt-5fe864873cb5
-    '@nuxtjs/style-resources',
-    'bootstrap-vue/nuxt',
+    '@nuxtjs/style-resources'
   ],
   // global scss variables config
   styleResources: {
